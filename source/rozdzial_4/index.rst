@@ -110,7 +110,7 @@ Wariant SQLite został dostosowany do prostszego modelu typów danych oferowaneg
 4.2. Wybór mechanizmów wsadowego wprowadzania danych
 ----------------------------------------------------
 
-W celu sprawnego zainicjowania bazy danymi testowymi zrezygnowano z ręcznego przygotowywania pojedynczych instrukcji ``INSERT`` na rzecz automatyzacji realizowanej w języku Python. Dane wejściowe przygotowano w postaci plików ``CSV`` oraz struktury ``JSON``, co umożliwiło ich łatwe przetwarzanie i przenoszenie pomiędzy wariantami bazy.
+W celu sprawnego zainicjowania bazy danymi testowymi zrezygnowano z ręcznego przygotowywania pojedynczych instrukcji ``INSERT`` na rzecz automatyzacji realizowanej w języku Python. Dane wejściowe przygotowano w postaci pliku ``JSON``, co umożliwiło jego łatwe przetwarzanie i przenoszenie pomiędzy wariantami bazy.
 
 Do komunikacji z obiema bazami wykorzystano odpowiednie interfejsy programistyczne: moduł ``sqlite3`` dla SQLite oraz bibliotekę ORM ``SQLAlchemy`` dla PostgreSQL. Istotnym elementem implementacji było zastosowanie wstawiania wsadowego przy użyciu funkcji ``executemany()``. Mechanizm ten pozwala przesyłać wiele rekordów w ramach jednego wywołania, co ogranicza narzut komunikacyjny i skraca czas zasilania bazy danymi.
 
